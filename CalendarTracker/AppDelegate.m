@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "EventViewController.h"
+#import "TotalHoursViewController.h"
 
 @implementation AppDelegate
 
@@ -16,7 +17,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+     //EventViewController * eventController = [[EventViewController alloc] initWithNibName:@"EventViewController" bundle:nil];
+    EventViewController * tc = [[EventViewController alloc]initWithNibName:@"EventViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tc];
+    self.viewController = nav;
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
