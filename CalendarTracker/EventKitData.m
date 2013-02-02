@@ -26,7 +26,6 @@
                 if (granted) {
                     NSLog(@"Events calendar accessed");
                     //---- codes here when user allow your app to access theirs' calendar.
-                    
                 } else
                 {
                     NSLog(@"Failed to access events calendar");
